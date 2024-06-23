@@ -15,5 +15,5 @@
 
 # Files
 1. ```json_to_json_prompt.txt``` - Contains the prompt
-2. ```app.py``` - Code that converts a pdf file to a plain json using pdfplumber, restructures that json file to a more structured format using Openai API key and then stores in the neo4j database.
+2. ```app.py``` - Code that converts a pdf file to a plain json using pdfplumber, restructures that json file to a more structured format using Openai API key and then stores in the neo4j database. All currently deployed on streamlit interface.
 3. ```client.py``` - Fetching data from neo4j using NLP (Work in progress).
