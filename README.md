@@ -7,5 +7,6 @@
    ```
    uri = "bolt://localhost:7687"  # Update with your Neo4j URI
    user = "neo4j"  # Update with your Neo4j username
-   password = "yatharth2004"  # Update with your Neo4j password```
+   password = "yatharth2004"  # Update with your Neo4j password
+   ```
 6. Once the installation is complete, you can locally execute it by entering ```streamlit run app.py```
