@@ -1,6 +1,6 @@
 # Instructions
 1. Clone the repository to your local computer using ```git clone https://github.com/CipJusCodin/7Dliving-pdf-to-neo4j-tool.git```
-2. Creating a Python environment (optional but recommended)
+2. Create a Python environment (optional but recommended)
 3. Begin by installing all the necessary libraries with ```pip install -r requirements.txt```
 4. Create a file named ```.env``` in the cloned repository and  type ```OPENAI_API_KEY="Your api key"```
 5. Download and install neo4j database (https://neo4j.com/download/)
