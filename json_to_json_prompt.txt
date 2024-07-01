@@ -131,4 +131,174 @@ If there are multiple questions, split them into two separate blocks of JSON:
     "Answer": "58.6 m"
 }
 
-<The final output should be in JSON format>
+
+
+#### Example ####
+
+{
+    "0":""
+    "1":"Parallel body distances:"
+    "2":"Lightship"
+    "3":"Normal Ballast"
+    "4":"Summer Dwt"
+}
+{
+    "0":""
+    "1":"Forward to mid-point manifold:"
+    "2":"20.2 Meters"
+    "3":"35.4 Meters"
+    "4":"35.4 Meters"
+}
+{
+    "0":""
+    "1":"Aft to mid-point manifold:"
+    "2":"22.0 Meters"
+    "3":"31.9 Meters"
+    "4":"37.8 Meters"
+}
+
+Here the column attributes are Lightship, Normal Ballast, Summer Dwt.
+The row attributes are Forward to mid-point manifold, Aft to mid-point manifold.
+
+<It should be formatted in the below technique>
+
+[
+  {
+    "Question Number": "",
+    "Question": "Lightship: Forward to manifold?",
+    "Answer": "20.2 meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Lightship: Aft to manifold?",
+    "Answer": "22.0 meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Normal Ballast: Forward to manifold?",
+    "Answer": "35.4 meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Normal Ballast: Aft to manifold?",
+    "Answer": "31.9 meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Summer Dwt: Forward to manifold?",
+    "Answer": "35.4 meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Summer Dwt: Aft to manifold?",
+    "Answer": "37.8 meters"
+  }
+]
+
+#### Example ####
+
+
+{
+    "0":""
+    "1":"Loadline"
+    "2":"Freeboard"
+    "3":"Draft"
+    "4":"Deadweight"
+    "5":"Displacement"
+}
+{
+    "0":""
+    "1":"Summer:"
+    "2":"6.013 Meters"
+    "3":"10.023 Meters"
+    "4":"30561 Metric Tons"
+    "5":"37650 Metric Tons"
+}
+{
+    "0":""
+    "1":"Winter:"
+    "2":"6.221 Meters"
+    "3":"9.815 Meters"
+    "4":"29907 Metric Tons"
+    "5":"36751 Metric Tons"
+}
+{
+    "0":""
+    "1":"Tropical:"
+    "2":"5.805 Meters"
+    "3":"10.321 Meters"
+    "4":"31418 Metric Tons"
+    "5":"38461 Metric Tons"
+}
+
+Here the column attributes are Loadline Freeboard, Draft, Deadweight, Displacement.
+The row attributes are Summer, Winter, Tropical.
+
+<It should be formatted in the below technique>
+
+[
+  {
+    "Question Number": "",
+    "Question": "Summer: Loadline Freeboard?",
+    "Answer": "6.013 Meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Summer: Draft?",
+    "Answer": "10.023 Meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Summer: Deadweight?",
+    "Answer": "30561 Metric Tons"
+  },
+  {
+    "Question Number": "",
+    "Question": "Summer: Displacement?",
+    "Answer": "37650 Metric Tons"
+  },
+  {
+    "Question Number": "",
+    "Question": "Winter: Loadline Freeboard?",
+    "Answer": "6.221 Meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Winter: Draft?",
+    "Answer": "9.815 Meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Winter: Deadweight?",
+    "Answer": "29907 Metric Tons"
+  },
+  {
+    "Question Number": "",
+    "Question": "Winter: Displacement?",
+    "Answer": "36751 Metric Tons"
+  },
+  {
+    "Question Number": "",
+    "Question": "Tropical: Loadline Freeboard?",
+    "Answer": "5.805 Meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Tropical: Draft?",
+    "Answer": "10.321 Meters"
+  },
+  {
+    "Question Number": "",
+    "Question": "Tropical: Deadweight?",
+    "Answer": "31418 Metric Tons"
+  },
+  {
+    "Question Number": "",
+    "Question": "Tropical: Displacement?",
+    "Answer": "38461 Metric Tons"
+  }
+]
+
+
+
+<The final output should be in JSON format, make sure the question numbers are properly numbered it is very important>
