@@ -42,10 +42,11 @@ def process_with_openai(input_data):
     ]
     
     response = client.chat.completions.create(
-        model=GPT_MODEL,  
+        model=GPT_MODEL,
         messages=messages,
         max_tokens=10000,
-        temperature=1,top_p=1,
+        temperature=1,
+        top_p=1,
         frequency_penalty=0,
         presence_penalty=0
     )
@@ -133,29 +134,36 @@ def populate_data(json_data):
 def main():
     st.title("PDF to JSON Table Extractor and Neo4j Populator")
 
-    uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
+    uploaded_files = st.file_uploader("Upload PDF files", type="pdf", accept_multiple_files=True)
 
-    if uploaded_file is not None:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
-            tmp_file.write(uploaded_file.read())
-            tmp_file_path = tmp_file.name
+    if uploaded_files:
+        temp_files = []
+        for uploaded_file in uploaded_files:
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
+                tmp_file.write(uploaded_file.read())
+                temp_files.append(tmp_file.name)
 
         if st.button("Convert to JSON and Populate Neo4j"):
-            tables = pdf_to_json_chunks(tmp_file_path)
+            all_converted_data = []
 
-            chunk_size = 5  # Number of tables per chunk
-            converted_data = []
-            
-            for i in range(0, len(tables), chunk_size):
-                chunk = tables[i:i + chunk_size]
-                for table in chunk:
-                    data = process_with_openai(table)
-                    converted_data.append(data)
+            for tmp_file_path in temp_files:
+                tables = pdf_to_json_chunks(tmp_file_path)
+                chunk_size = 5  # Number of tables per chunk
+                converted_data = []
 
-            for data in converted_data:
-                populate_data(data)
+                for i in range(0, len(tables), chunk_size):
+                    chunk = tables[i:i + chunk_size]
+                    for table in chunk:
+                        data = process_with_openai(table)
+                        converted_data.append(data)
+
+                for data in converted_data:
+                    populate_data(data)
+                
+                all_converted_data.extend(converted_data)
+
             st.success("Conversion and population successful!")
-            st.json(converted_data)
+            st.json(all_converted_data)
 
 if __name__ == "__main__":
     main()
