@@ -28,9 +28,12 @@ def pdf_to_json_chunks(pdf_path):
                     "table_number": table_number + 1,
                     "table": df.to_dict(orient="records")
                 })
+
+    with open("basic_json.json", "w", encoding="utf-8") as json_file:
+        json.dump(tables, json_file, indent=4)
     return tables
 
-def process_with_openai(input_data):
+def process_with_openai(input_data, append_json_list):
     with open("json_to_json_prompt.txt", "r", encoding="utf-8") as file:
         base_prompt = file.read()
 
@@ -52,6 +55,11 @@ def process_with_openai(input_data):
     )
 
     output_message = response.choices[0].message.content
+    append_json_list.append(json.loads(output_message))
+
+    # with open("structured_json.json", "w", encoding="utf-8") as json_file:
+    #     json.dump(json.loads(output_message), json_file, indent=4)
+
     return json.loads(output_message)
 
 class Neo4jHandler:
@@ -154,8 +162,7 @@ def main():
                 for i in range(0, len(tables), chunk_size):
                     chunk = tables[i:i + chunk_size]
                     for table in chunk:
-                        data = process_with_openai(table)
-                        converted_data.append(data)
+                        process_with_openai(table, converted_data)
 
                 for data in converted_data:
                     populate_data(data)
@@ -164,6 +171,10 @@ def main():
 
             st.success("Conversion and population successful!")
             st.json(all_converted_data)
+
+            # Then write all resulting data to file after main processing
+            with open("structured_json.json", "w", encoding="utf-8") as json_file:
+                json.dump(all_converted_data, json_file, indent=4)
 
 if __name__ == "__main__":
     main()

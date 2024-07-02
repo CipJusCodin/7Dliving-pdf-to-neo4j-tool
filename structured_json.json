@@ -1,0 +1,1187 @@
+[
+    {
+        "Document Name": "INTERTANKO'S STANDARD TANKER CHARTERING QUESTIONNAIRE 88 (Q88)",
+        "Document Version": "Version 3",
+        "Categories": {
+            "VESSEL DESCRIPTION": [
+                {
+                    "Question Number": "1.1",
+                    "Question": "Date updated:",
+                    "Answer": "Dec 09, 2010"
+                },
+                {
+                    "Question Number": "1.2",
+                    "Question": "Vessel's name:",
+                    "Answer": "Marilena"
+                },
+                {
+                    "Question Number": "1.3",
+                    "Question": "IMO number:",
+                    "Answer": "9443839"
+                },
+                {
+                    "Question Number": "1.4",
+                    "Question": "Vessel's previous name(s) and date(s) of change:",
+                    "Answer": "Not Applicable"
+                },
+                {
+                    "Question Number": "1.5",
+                    "Question": "Date delivered:",
+                    "Answer": "May 12, 2009"
+                },
+                {
+                    "Question Number": "1.6",
+                    "Question": "Builder (where built):",
+                    "Answer": "STX OFFSHORE & SHIPBUILDING LTD"
+                },
+                {
+                    "Question Number": "1.7",
+                    "Question": "Flag:",
+                    "Answer": "Panama"
+                },
+                {
+                    "Question Number": "1.8",
+                    "Question": "Port of Registry:",
+                    "Answer": "PANAMA"
+                },
+                {
+                    "Question Number": "1.9",
+                    "Question": "Call sign:",
+                    "Answer": "3FHA3"
+                },
+                {
+                    "Question Number": "1.10",
+                    "Question": "Vessel's satcom phone number:",
+                    "Answer": "+870 764906132 (Bridge)"
+                },
+                {
+                    "Question Number": "1.10a",
+                    "Question": "Vessel's fax number:",
+                    "Answer": "+870 764906134"
+                },
+                {
+                    "Question Number": "1.10b",
+                    "Question": "Vessel's telex number:",
+                    "Answer": "+870 435574411"
+                },
+                {
+                    "Question Number": "1.10c",
+                    "Question": "Vessel's email address:",
+                    "Answer": "master@marilena.bsmfleet.com"
+                },
+                {
+                    "Question Number": "1.11",
+                    "Question": "Type of vessel:",
+                    "Answer": "Chemical"
+                },
+                {
+                    "Question Number": "1.12",
+                    "Question": "Type of hull:",
+                    "Answer": "Double Hull"
+                },
+                {
+                    "Question Number": "1.13",
+                    "Question": "Classification society:",
+                    "Answer": "American Bureau of Shipping"
+                },
+                {
+                    "Question Number": "1.14",
+                    "Question": "Class notation:",
+                    "Answer": "+A1, CHEMICAL CARRIER, OIL CARRIER, E, +AMS, +ACCU, PORT, VEC-L, TCM, ES Additional\nnotations: RRDA, POT, ESP, UWILD, CRC, CPP, RW"
+                },
+                {
+                    "Question Number": "1.15",
+                    "Question": "If Classification society changed, name of previous society:",
+                    "Answer": "N/A"
+                },
+                {
+                    "Question Number": "1.16",
+                    "Question": "If Classification society changed, date of change:",
+                    "Answer": "Not Applicable"
+                },
+                {
+                    "Question Number": "1.17",
+                    "Question": "IMO type, if applicable:",
+                    "Answer": "2,3"
+                },
+                {
+                    "Question Number": "1.18",
+                    "Question": "Does the vessel have ice class? If yes, state what level:",
+                    "Answer": "No , Not Applicable"
+                },
+                {
+                    "Question Number": "1.19",
+                    "Question": "Date / place of last dry-dock:",
+                    "Answer": "Not Applicable, Newbuilding"
+                },
+                {
+                    "Question Number": "1.20",
+                    "Question": "Date next dry dock due",
+                    "Answer": "May 11, 2012"
+                },
+                {
+                    "Question Number": "1.21",
+                    "Question": "Date of last special survey / next survey due:",
+                    "Answer": "Not Applicable, May 11, 2014"
+                },
+                {
+                    "Question Number": "1.22",
+                    "Question": "Date of last annual survey:",
+                    "Answer": "Jul 12, 2010"
+                },
+                {
+                    "Question Number": "1.23",
+                    "Question": "If ship has Condition Assessment Program (CAP), what is the latest overall rating:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "1.24",
+                    "Question": "Does the vessel have a statement of compliance issued under the provisions of the Condition\nAssessment Scheme (CAS): If yes, what is the expiry date?",
+                    "Answer": "N/A, Not Applicable"
+                }
+            ],
+            "Dimensions": [
+                {
+                    "Question Number": "1.25",
+                    "Question": "Length Over All (LOA):",
+                    "Answer": "120 m"
+                },
+                {
+                    "Question Number": "1.26",
+                    "Question": "Length Between Perpendiculars (LBP):",
+                    "Answer": "113 m"
+                },
+                {
+                    "Question Number": "1.27",
+                    "Question": "Extreme breadth (Beam):",
+                    "Answer": "20.4 m"
+                },
+                {
+                    "Question Number": "1.28",
+                    "Question": "Moulded depth:",
+                    "Answer": "11.9 m"
+                },
+                {
+                    "Question Number": "1.29",
+                    "Question": "Keel to Masthead (KTM) / KTM in collapsed condition (if applicable):",
+                    "Answer": "36.0 m"
+                },
+                {
+                    "Question Number": "1.30a",
+                    "Question": "Bow to Center Manifold (BCM):",
+                    "Answer": "61.4 m"
+                },
+                {
+                    "Question Number": "1.30b",
+                    "Question": "Stern to Center Manifold (SCM):",
+                    "Answer": "58.6 m"
+                },
+                {
+                    "Question Number": "1.31",
+                    "Question": "Distance bridge front to center of manifold:",
+                    "Answer": "31.2 m"
+                },
+                {
+                    "Question Number": "1.32a",
+                    "Question": "Parallel body distances: Forward to mid-point manifold",
+                    "Answer": "25.4 m"
+                },
+                {
+                    "Question Number": "1.32b",
+                    "Question": "Parallel body distances: Aft to mid-point manifold",
+                    "Answer": "20.63 m"
+                },
+                {
+                    "Question Number": "1.32c",
+                    "Question": "Parallel body length:",
+                    "Answer": "46.05 m"
+                },
+                {
+                    "Question Number": "1.33",
+                    "Question": "FWA at summer draft / TPC immersion at summer draft:",
+                    "Answer": "191 mm / 21.7 MT"
+                },
+                {
+                    "Question Number": "1.34",
+                    "Question": "What is the max height of mast above waterline (air draft)",
+                    "Answer": "Full Mast"
+                },
+                {
+                    "Question Number": "1.34a",
+                    "Question": "Max height of mast above waterline (air draft): Lightship",
+                    "Answer": "9.7 m"
+                },
+                {
+                    "Question Number": "1.34b",
+                    "Question": "Max height of mast above waterline (air draft): Normal ballast",
+                    "Answer": "7.21 m"
+                },
+                {
+                    "Question Number": "1.34c",
+                    "Question": "Max height of mast above waterline (air draft): At loaded summer deadweight",
+                    "Answer": "27.350 m"
+                }
+            ],
+            "Tonnages": [
+                {
+                    "Question Number": "1.35",
+                    "Question": "Net Tonnage:",
+                    "Answer": "3725"
+                },
+                {
+                    "Question Number": "1.36a",
+                    "Question": "Gross Tonnage:",
+                    "Answer": "8247"
+                },
+                {
+                    "Question Number": "1.36b",
+                    "Question": "Reduced Gross Tonnage (if applicable):",
+                    "Answer": "6796"
+                },
+                {
+                    "Question Number": "1.37a",
+                    "Question": "Suez Canal Tonnage - Gross (SCGT):",
+                    "Answer": "9047.94"
+                },
+                {
+                    "Question Number": "1.37b",
+                    "Question": "Suez Canal Tonnage - Net (SCNT):",
+                    "Answer": "6793.39"
+                },
+                {
+                    "Question Number": "1.38",
+                    "Question": "Panama Canal Net Tonnage (PCNT):",
+                    "Answer": "6974"
+                }
+            ],
+            "Loadline Information": [
+                {
+                    "Question Number": "1.39",
+                    "Question": "Freeboard",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "1.39a",
+                    "Question": "Summer: Loadline",
+                    "Answer": "3.261 m"
+                },
+                {
+                    "Question Number": "1.39b",
+                    "Question": "Summer: Draft",
+                    "Answer": "8.65 m"
+                },
+                {
+                    "Question Number": "1.39c",
+                    "Question": "Summer: Deadweight",
+                    "Answer": "12966 MT"
+                },
+                {
+                    "Question Number": "1.39d",
+                    "Question": "Summer: Displacement",
+                    "Answer": "16668 MT"
+                },
+                {
+                    "Question Number": "1.39e",
+                    "Question": "Winter: Loadline",
+                    "Answer": "3.441 m"
+                },
+                {
+                    "Question Number": "1.39f",
+                    "Question": "Winter: Draft",
+                    "Answer": "8.48 m"
+                },
+                {
+                    "Question Number": "1.39g",
+                    "Question": "Winter: Deadweight",
+                    "Answer": "12556 MT"
+                },
+                {
+                    "Question Number": "1.39h",
+                    "Question": "Winter: Displacement",
+                    "Answer": "16276 MT"
+                },
+                {
+                    "Question Number": "1.39i",
+                    "Question": "Tropical: Loadline",
+                    "Answer": "3.081 m"
+                },
+                {
+                    "Question Number": "1.39j",
+                    "Question": "Tropical: Draft",
+                    "Answer": "8.84 m"
+                },
+                {
+                    "Question Number": "1.39k",
+                    "Question": "Tropical: Deadweight",
+                    "Answer": "13342.5 MT"
+                },
+                {
+                    "Question Number": "1.39l",
+                    "Question": "Tropical: Displacement",
+                    "Answer": "17062.5 MT"
+                },
+                {
+                    "Question Number": "1.39m",
+                    "Question": "Lightship: Freeboard",
+                    "Answer": "9.7 m"
+                },
+                {
+                    "Question Number": "1.39n",
+                    "Question": "Lightship: Displacement",
+                    "Answer": "3720 MT"
+                },
+                {
+                    "Question Number": "1.39o",
+                    "Question": "Normal Ballast Condition: Freeboard",
+                    "Answer": "7.21 m"
+                },
+                {
+                    "Question Number": "1.39p",
+                    "Question": "Normal Ballast Condition: Draft",
+                    "Answer": "4.69 m"
+                },
+                {
+                    "Question Number": "1.39q",
+                    "Question": "Normal Ballast Condition: Deadweight",
+                    "Answer": "4750 MT"
+                },
+                {
+                    "Question Number": "1.39r",
+                    "Question": "Normal Ballast Condition: Displacement",
+                    "Answer": "8300 MT"
+                }
+            ],
+            "Ownership and Operation": [
+                {
+                    "Question Number": "1.42",
+                    "Question": "Registered owner - Full style:",
+                    "Answer": "Chemical Partnership Shipping ltd. C/O Benetech SA\nNot Applicable\nTel: Not Applicable\nFax: Not Applicable\nTelex: Not Applicable\nEmail: Not Applicable"
+                },
+                {
+                    "Question Number": "1.43",
+                    "Question": "Technical operator - Full style:",
+                    "Answer": "Berhard Schulte Shipmanagement(HELLAS)SPLLC\n6-8 Kifisias Avenue 151 25 Marousi,Athens,Greece\nTel: +302106930330\nFax: +302106930333\nTelex: Not Applicable\nEmail: gr-sdc@gr.bs-shipmanagement.com"
+                },
+                {
+                    "Question Number": "1.44",
+                    "Question": "Commercial operator - Full style:",
+                    "Answer": "BENETECH SA\nPOSIDONOS AVENUE 48, GLYFADA - ATHENS - GREECE\nTel: +302108980446\nFax: +302108946180\nTelex: Not Applicable\nEmail: mail@benetech.gr\nWeb: www.Benetech.gr"
+                }
+            ]
+        }
+    },
+    {
+        "Document Name": "Intertanko Standard Tanker Chartering Questionnaire 88",
+        "Document Version": "Version 3",
+        "Categories": {
+            "VESSEL DESCRIPTION": [
+                {
+                    "Question Number": "1.45",
+                    "Question": "Disponent owner - Full style:",
+                    "Answer": ""
+                }
+            ],
+            "CERTIFICATION": [
+                {
+                    "Question Number": "2.1",
+                    "Question": "Safety Equipment Certificate:",
+                    "Answer": "May 12, 2009"
+                },
+                {
+                    "Question Number": "2.2",
+                    "Question": "Safety Radio Certificate:",
+                    "Answer": "May 12, 2009"
+                },
+                {
+                    "Question Number": "2.3",
+                    "Question": "Safety Construction Certificate:",
+                    "Answer": "May 12, 2009"
+                },
+                {
+                    "Question Number": "2.4",
+                    "Question": "Loadline Certificate:",
+                    "Answer": "May 12, 2009"
+                },
+                {
+                    "Question Number": "2.5",
+                    "Question": "International Oil Pollution Prevention Certificate (IOPPC):",
+                    "Answer": "May 12, 2009"
+                },
+                {
+                    "Question Number": "2.6",
+                    "Question": "Safety Management Certificate (SMC):",
+                    "Answer": "Dec 10, 2009"
+                },
+                {
+                    "Question Number": "2.7",
+                    "Question": "Document of Compliance (DOC):",
+                    "Answer": "Feb 22, 2010"
+                },
+                {
+                    "Question Number": "2.8",
+                    "Question": "USCG (specify: COC, LOC or COI):",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "2.9",
+                    "Question": "Civil Liability Convention Certificate (CLC):",
+                    "Answer": "Feb 18, 2010"
+                },
+                {
+                    "Question Number": "2.10",
+                    "Question": "Civil Liability for Bunker Oil Pollution Damage Convention Certificate (CLBC):",
+                    "Answer": "Feb 20, 2010"
+                },
+                {
+                    "Question Number": "2.11",
+                    "Question": "U.S. Certificate of Financial Responsibility (COFR):",
+                    "Answer": "Not Applicable"
+                },
+                {
+                    "Question Number": "2.12",
+                    "Question": "Certificate of Fitness (Chemicals):",
+                    "Answer": "Nov 02, 2009"
+                },
+                {
+                    "Question Number": "2.13",
+                    "Question": "Certificate of Fitness (Gas):",
+                    "Answer": "Not Applicable"
+                },
+                {
+                    "Question Number": "2.14",
+                    "Question": "Certificate of Class:",
+                    "Answer": "Oct 22, 2009"
+                },
+                {
+                    "Question Number": "2.15",
+                    "Question": "International Ship Security Certificate (ISSC):",
+                    "Answer": "Oct 26, 2009"
+                },
+                {
+                    "Question Number": "2.16",
+                    "Question": "International Sewage Pollution Prevention Certificate (ISPPC)",
+                    "Answer": "May 12, 2009"
+                },
+                {
+                    "Question Number": "2.17",
+                    "Question": "International Air Pollution Prevention Certificate (IAPP):",
+                    "Answer": "May 12, 2009"
+                }
+            ],
+            "CREW MANAGEMENT": [
+                {
+                    "Question Number": "3.1",
+                    "Question": "Nationality of Master:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "3.2",
+                    "Question": "Nationality of Officers:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "3.3",
+                    "Question": "Nationality of Crew:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "3.4",
+                    "Question": "If Officers/Crew employed by a Manning Agency - Full style:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "3.5",
+                    "Question": "What is the common working language onboard:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "3.6",
+                    "Question": "Do officers speak and understand English:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "3.7",
+                    "Question": "In case of Flag Of Convenience, is the ITF Special Agreement on board:",
+                    "Answer": ""
+                }
+            ],
+            "HELICOPTERS": [
+                {
+                    "Question Number": "4.1",
+                    "Question": "Can the ship comply with the ICS Helicopter Guidelines:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "4.2",
+                    "Question": "If Yes, state whether winching or landing area provided:",
+                    "Answer": ""
+                }
+            ],
+            "FOR USA CALLS": [
+                {
+                    "Question Number": "5.1",
+                    "Question": "Has the vessel Operator submitted a Vessel Spill Response Plan to the US Coast Guard which has been approved by official USCG letter:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "5.2",
+                    "Question": "Qualified individual (QI) - Full style:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "5.3",
+                    "Question": "Oil Spill Response Organization (OSRO) -Full style:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "5.4",
+                    "Question": "Has technical operator signed the SCIA / C-TPAT agreement with US customs concerning drug smuggling:",
+                    "Answer": ""
+                }
+            ],
+            "CARGO AND BALLAST HANDLING": [
+                {
+                    "Question Number": "6.1",
+                    "Question": "Is vessel fitted with centerline bulkhead in all cargo tanks:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.2",
+                    "Question": "If Yes, is bulkhead solid or perforated:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.3",
+                    "Question": "Capacity (98%) of each natural segregation with double valve (specify tanks):",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.4",
+                    "Question": "Total cubic capacity (98%, excluding slop tanks):",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.5",
+                    "Question": "Slop tank(s) capacity (98%):",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.6",
+                    "Question": "Residual/Retention oil tank(s) capacity (98%), if applicable:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.7",
+                    "Question": "Does vessel have Segregated Ballast Tanks (SBT) or Clean Ballast Tanks (CBT):",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.8",
+                    "Question": "What is total capacity of SBT?",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.9",
+                    "Question": "What percentage of SDWT can vessel maintain with SBT only:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.10",
+                    "Question": "Does vessel meet the requirements of MARPOL Annex I Reg 18.2: (previously Reg 13.2)",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.11",
+                    "Question": "How many grades/products can vessel load/discharge with double valve segregation:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.12",
+                    "Question": "Maximum loading rate for homogenous cargo per manifold connection:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "6.13",
+                    "Question": "Maximum loading rate for homogenous cargo loaded simultaneously through all manifolds:",
+                    "Answer": ""
+                }
+            ]
+        }
+    },
+    {
+        "Document Name": "INTERTANKO'S STANDARD TANKER CHARTERING QUESTIONNAIRE 88",
+        "Document Version": "Version 3",
+        "Categories": {
+            "VESSEL DESCRIPTION": [
+                {
+                    "Question Number": "1",
+                    "Question": "VESSEL DESCRIPTION:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "1.1",
+                    "Question": "VESSEL NAME:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "1.2",
+                    "Question": "Former Name(s) of Vessel:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "1.3",
+                    "Question": "IMO number:",
+                    "Answer": "9443839"
+                },
+                {
+                    "Question Number": "1.4",
+                    "Question": "Official Number:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "1.5",
+                    "Question": "Flag:",
+                    "Answer": null
+                }
+            ],
+            "CARGO TANKS GENERAL": [
+                {
+                    "Question Number": "6",
+                    "Question": "CARGO TANKS GENERAL",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "6.14",
+                    "Question": "Are there any cargo tank filling restrictions. If yes, please specify:",
+                    "Answer": "Yes\nCARGO S.G.=1.025 (TON/M3) PARTIAL FILLING SHALL BE PERMITTED AT A LEVEL OF 66%\nCARGO TANK HEIGHT WITH CARGO SG=1.55"
+                },
+                {
+                    "Question Number": "6.15",
+                    "Question": "Pumps:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "6.15a",
+                    "Question": "Cargo:",
+                    "Answer": "No.\nType\nCapacity"
+                },
+                {
+                    "Question Number": "6.15b",
+                    "Question": "Cargo: No. 10",
+                    "Answer": "SUBMERGED CENTRIFUGAL WITH STRIPPING SYSTEM\nSD 125-5 DTHH 56-A 320\nTK 80-2 DUHH 16-A 168"
+                },
+                {
+                    "Question Number": "6.15c",
+                    "Question": "Cargo: No. 2",
+                    "Answer": "SUBMERGED CENTRIFUGAL WITH STRIPPING SYSTEM\nSD 125-5 DTHH 56-A 320\nTK 80-2 DUHH 16-A 168"
+                },
+                {
+                    "Question Number": "6.15d",
+                    "Question": "Cargo: No. 1",
+                    "Answer": "SUBMERGED CENTRIFUGAL WITH STRIPPING SYSTEM\nSD 125-5 DTHH 56-A 320\nTK 80-2 DUHH 16-A 168"
+                },
+                {
+                    "Question Number": "6.15e",
+                    "Question": "Capacity: 300 M3/HR",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "6.15f",
+                    "Question": "Capacity: 130 M3/HR",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "6.15g",
+                    "Question": "Capacity: 70 M3/HR",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "6.16",
+                    "Question": "How many cargo pumps can be run simultaneously at full capacity:",
+                    "Answer": "4 + 2 SLOP PUMPS"
+                },
+                {
+                    "Question Number": "6.17",
+                    "Question": "Is ship fitted with a Cargo Control Room (CCR):",
+                    "Answer": "Yes"
+                },
+                {
+                    "Question Number": "6.18",
+                    "Question": "Can tank innage / ullage be read from the CCR:",
+                    "Answer": "Yes"
+                },
+                {
+                    "Question Number": "6.19",
+                    "Question": "Can ship operate under closed conditions in accordance with ISGOTT:",
+                    "Answer": "Yes"
+                },
+                {
+                    "Question Number": "6.20",
+                    "Question": "What type of fixed closed tank gauging system is fitted:",
+                    "Answer": "Radar"
+                },
+                {
+                    "Question Number": "6.21",
+                    "Question": "Are overfill (high-high) alarms fitted? If Yes, indicate whether to all tanks or partial:",
+                    "Answer": "All Tanks"
+                },
+                {
+                    "Question Number": "6.22",
+                    "Question": "Is a vapor return system (VRS) fitted:",
+                    "Answer": "Yes"
+                },
+                {
+                    "Question Number": "6.23",
+                    "Question": "Number/size of VRS manifolds (per side):",
+                    "Answer": "2\n150 mm"
+                },
+                {
+                    "Question Number": "6.24",
+                    "Question": "State what type of venting system is fitted:",
+                    "Answer": "HIGH VELOCITY P/V VALVES"
+                },
+                {
+                    "Question Number": "6.25",
+                    "Question": "Does vessel comply with the latest edition of the OCIMF 'Recommendations for Oil Tanker\nManifolds and Associated Equipment':",
+                    "Answer": "Yes"
+                },
+                {
+                    "Question Number": "6.26",
+                    "Question": "What is the number of cargo connections per side:",
+                    "Answer": "6"
+                },
+                {
+                    "Question Number": "6.27",
+                    "Question": "What is the size of cargo connections:",
+                    "Answer": "200 mm"
+                },
+                {
+                    "Question Number": "6.28",
+                    "Question": "What is the material of the manifold:",
+                    "Answer": "STAINLESS STEEL"
+                },
+                {
+                    "Question Number": "6.29",
+                    "Question": "Distance between cargo manifold centers:",
+                    "Answer": "900 mm"
+                },
+                {
+                    "Question Number": "6.30",
+                    "Question": "Distance ships rail to manifold:",
+                    "Answer": "3460 mm"
+                },
+                {
+                    "Question Number": "6.31",
+                    "Question": "Distance manifold to ships side:",
+                    "Answer": "3460 mm"
+                },
+                {
+                    "Question Number": "6.32",
+                    "Question": "Top of rail to center of manifold:",
+                    "Answer": "540 mm"
+                },
+                {
+                    "Question Number": "6.33",
+                    "Question": "Distance main deck to center of manifold:",
+                    "Answer": "1840 mm"
+                },
+                {
+                    "Question Number": "6.34",
+                    "Question": "Manifold height above the waterline in normal ballast / at SDWT condition:",
+                    "Answer": "9.050 m\n5.076 m"
+                },
+                {
+                    "Question Number": "6.35",
+                    "Question": "Number / size reducers:",
+                    "Answer": "5 x 200/250mm (8/10\")\n1 x 200/125mm (8/5\")\n2 x 200/150mm (8/6\")\n2 x 75/150mm (3/6\")"
+                },
+                {
+                    "Question Number": "6.36",
+                    "Question": "Is vessel fitted with a stern manifold:",
+                    "Answer": "N/A"
+                },
+                {
+                    "Question Number": "6.37",
+                    "Question": "If stern manifold fitted, state size:",
+                    "Answer": "mm"
+                },
+                {
+                    "Question Number": "6.38",
+                    "Question": "Type of cargo heating system?",
+                    "Answer": "HEATING COIL"
+                },
+                {
+                    "Question Number": "6.39",
+                    "Question": "If fitted, are all tanks coiled?",
+                    "Answer": "Yes"
+                },
+                {
+                    "Question Number": "6.40",
+                    "Question": "If fitted, what is the material of the heating coils:",
+                    "Answer": "Stainless Steel"
+                },
+                {
+                    "Question Number": "6.41",
+                    "Question": "Maximum temperature cargo can be loaded/maintained:",
+                    "Answer": "66.0 \u00b0C / 150.8 \u00b0F\n66 \u00b0C / 150.8 \u00b0F"
+                },
+                {
+                    "Question Number": "6.42",
+                    "Question": "Are cargo, ballast and slop tanks coated?",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "6.42a",
+                    "Question": "Cargo tanks:",
+                    "Answer": "Coated\nType\nTo What Extent"
+                },
+                {
+                    "Question Number": "6.42b",
+                    "Question": "Cargo tanks: Coated",
+                    "Answer": "PHENOLIC EPOXY\nWHOLE"
+                },
+                {
+                    "Question Number": "6.42c",
+                    "Question": "Ballast tanks:",
+                    "Answer": "Coated\nType\nTo What Extent"
+                },
+                {
+                    "Question Number": "6.42d",
+                    "Question": "Ballast tanks: Coated",
+                    "Answer": "EPOXY\nWHOLE"
+                },
+                {
+                    "Question Number": "6.42e",
+                    "Question": "Slop tanks:",
+                    "Answer": "Coated\nType\nTo What Extent"
+                },
+                {
+                    "Question Number": "6.42f",
+                    "Question": "Slop tanks: Coated",
+                    "Answer": "PHENOLIC EPOXY SIGMA PHENGUARD\nWhole Tank"
+                },
+                {
+                    "Question Number": "6.43",
+                    "Question": "If fitted, what type of anodes are used:",
+                    "Answer": "ZN ANODE AUB 555"
+                }
+            ],
+            "INERT GAS AND CRUDE OIL WASHING": [
+                {
+                    "Question Number": "7",
+                    "Question": "INERT GAS AND CRUDE OIL WASHING",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "7.1",
+                    "Question": "Is an Inert Gas System (IGS) fitted:",
+                    "Answer": "No"
+                },
+                {
+                    "Question Number": "7.2",
+                    "Question": "Is IGS supplied by flue gas, inert gas (IG) generator and/or nitrogen:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "7.3",
+                    "Question": "Is a Crude Oil Washing (COW) installation fitted:",
+                    "Answer": "N/A"
+                }
+            ],
+            "MOORING": [
+                {
+                    "Question Number": "8",
+                    "Question": "MOORING",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.1",
+                    "Question": "Mooring wires (on drums)",
+                    "Answer": "No.\nDiameter\nMaterial\nLength\nBreaking Strength"
+                },
+                {
+                    "Question Number": "8.1a",
+                    "Question": "Forecastle:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.1b",
+                    "Question": "Main deck fwd:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.1c",
+                    "Question": "Main deck aft:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.1d",
+                    "Question": "Poop deck:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.2",
+                    "Question": "Wire tails",
+                    "Answer": "No.\nDiameter\nMaterial\nLength\nBreaking Strength"
+                },
+                {
+                    "Question Number": "8.2a",
+                    "Question": "Forecastle:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.2b",
+                    "Question": "Main deck fwd:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.2c",
+                    "Question": "Main deck aft:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.2d",
+                    "Question": "Poop deck:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.3",
+                    "Question": "Mooring ropes (on drums)",
+                    "Answer": "No.\nDiameter\nMaterial\nLength\nBreaking Strength"
+                },
+                {
+                    "Question Number": "8.3a",
+                    "Question": "Forecastle:",
+                    "Answer": "4\n42 mm\nPOLYPROPYLENE AND POLYESTER\nCOMPOSITE\n200 m\n35 MT"
+                },
+                {
+                    "Question Number": "8.3b",
+                    "Question": "Main deck fwd:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.3c",
+                    "Question": "Main deck aft:",
+                    "Answer": null
+                },
+                {
+                    "Question Number": "8.3d",
+                    "Question": "Poop deck:",
+                    "Answer": "4\n42 mm\nPOLYPROPYLENE AND POLYESTER\nCOMPOSITE\n200 m\n35 MT"
+                },
+                {
+                    "Question Number": "8.4",
+                    "Question": "Other mooring lines",
+                    "Answer": "No.\nDiameter\nMaterial\nLength\nBreaking Strength"
+                },
+                {
+                    "Question Number": "8.4a",
+                    "Question": "Forecastle:",
+                    "Answer": "4\n42 mm\nPOLYSTER & POLYPROPELENE\n200 m\n35 MT"
+                }
+            ]
+        }
+    },
+    {
+        "Document Name": "Version 3 (INTERTANKO / Q88.com)",
+        "Document Version": "Version 3",
+        "Categories": {
+            "MISCELLANEOUS": [
+                {
+                    "Question Number": "9.1",
+                    "Question": "What type of fuel is used for main propulsion?",
+                    "Answer": "HFO"
+                },
+                {
+                    "Question Number": "9.2",
+                    "Question": "What type of fuel is used in the generating plant?",
+                    "Answer": "HFO / MDO"
+                },
+                {
+                    "Question Number": "9.3",
+                    "Question": "Capacity of bunker tanks - IFO and MDO/MGO:",
+                    "Answer": "545.5 m3, 70.4 m3, 0 m3"
+                },
+                {
+                    "Question Number": "9.4",
+                    "Question": "Is vessel fitted with fixed or controllable pitch propeller(s)?",
+                    "Answer": "Fixed Pitch"
+                },
+                {
+                    "Question Number": "9.5",
+                    "Question": "P & I Club - Full Style:",
+                    "Answer": "STANDARD CLUB"
+                },
+                {
+                    "Question Number": "9.6",
+                    "Question": "P & I Club coverage - pollution liability coverage:",
+                    "Answer": "1000000000 US$"
+                },
+                {
+                    "Question Number": "9.7",
+                    "Question": "Date and place of last Port State Control inspection:",
+                    "Answer": "Nov 25, 2010 / Ras Laffan"
+                },
+                {
+                    "Question Number": "9.8",
+                    "Question": "Any outstanding deficiencies as reported by any Port State Control:",
+                    "Answer": "No"
+                },
+                {
+                    "Question Number": "9.9",
+                    "Question": "If yes, provide details:",
+                    "Answer": ""
+                },
+                {
+                    "Question Number": "9.10",
+                    "Question": "Has vessel been involved in a pollution, grounding, serious casualty or collision incident during\nthe past 12 months? If yes, full description:",
+                    "Answer": "Pollution: No, Grounding: No, Serious casualty: No, Collision: No,"
+                },
+                {
+                    "Question Number": "9.11",
+                    "Question": "Last three cargoes / charterers / voyages (Last / 2nd Last / 3rd Last):",
+                    "Answer": "Contact owner for details"
+                },
+                {
+                    "Question Number": "9.12",
+                    "Question": "Date/Place of last SIRE Inspection:",
+                    "Answer": "Oct 28, 2010 / Mundra"
+                },
+                {
+                    "Question Number": "9.13",
+                    "Question": "Date/Place of last CDI Inspection:",
+                    "Answer": "Sep 01, 2010 / Mesaieed"
+                },
+                {
+                    "Question Number": "9.14",
+                    "Question": "Recent Oil company inspections/screenings (To the best of owners knowledge and without\nguarantee of acceptance for future business)*:\n*Blanket \"approvals\" are no longer given by Oil Majors and ships are accepted for the voyage on\na case by case basis.",
+                    "Answer": "Contact owner for details."
+                }
+            ],
+            "Engine Room": [
+                {
+                    "Question Number": "9.24",
+                    "Question": "Derrick / Crane description (Number, SWL and location):",
+                    "Answer": "Cranes: 1 x 5 Tonnes MIDSHIPS"
+                },
+                {
+                    "Question Number": "9.25",
+                    "Question": "What is maximum outreach of cranes / derricks outboard of the ship's side:",
+                    "Answer": "17.5 m"
+                }
+            ],
+            "Port State Control": [
+                {
+                    "Question Number": "9.7",
+                    "Question": "Date and place of last Port State Control inspection:",
+                    "Answer": "Nov 25, 2010 / Ras Laffan"
+                },
+                {
+                    "Question Number": "9.8",
+                    "Question": "Any outstanding deficiencies as reported by any Port State Control:",
+                    "Answer": "No"
+                },
+                {
+                    "Question Number": "9.9",
+                    "Question": "If yes, provide details:",
+                    "Answer": ""
+                }
+            ],
+            "Recent Operational History": [
+                {
+                    "Question Number": "9.10",
+                    "Question": "Has vessel been involved in a pollution, grounding, serious casualty or collision incident during\nthe past 12 months? If yes, full description:",
+                    "Answer": "Pollution: No, Grounding: No, Serious casualty: No, Collision: No,"
+                },
+                {
+                    "Question Number": "9.11",
+                    "Question": "Last three cargoes / charterers / voyages (Last / 2nd Last / 3rd Last):",
+                    "Answer": "Contact owner for details"
+                }
+            ],
+            "Insurance": [
+                {
+                    "Question Number": "9.5",
+                    "Question": "P & I Club - Full Style:",
+                    "Answer": "STANDARD CLUB"
+                },
+                {
+                    "Question Number": "9.6",
+                    "Question": "P & I Club coverage - pollution liability coverage:",
+                    "Answer": "1000000000 US$"
+                }
+            ],
+            "Vetting": [
+                {
+                    "Question Number": "9.12",
+                    "Question": "Date/Place of last SIRE Inspection:",
+                    "Answer": "Oct 28, 2010 / Mundra"
+                },
+                {
+                    "Question Number": "9.13",
+                    "Question": "Date/Place of last CDI Inspection:",
+                    "Answer": "Sep 01, 2010 / Mesaieed"
+                },
+                {
+                    "Question Number": "9.14",
+                    "Question": "Recent Oil company inspections/screenings (To the best of owners knowledge and without\nguarantee of acceptance for future business)*:\n*Blanket \"approvals\" are no longer given by Oil Majors and ships are accepted for the voyage on\na case by case basis.",
+                    "Answer": "Contact owner for details."
+                }
+            ],
+            "Ship To Ship Transfer (STS) Equipment": [
+                {
+                    "Question Number": "9.16",
+                    "Question": "Does vessel comply with recommendations contained in OCIMF/ICS Ship To Ship Transfer\nGuide (Petroleum or Liquified Gas, as applicable):",
+                    "Answer": "Yes"
+                },
+                {
+                    "Question Number": "9.17",
+                    "Question": "Is vessel fitted with chain stopper(s):",
+                    "Answer": "Yes"
+                },
+                {
+                    "Question Number": "9.18",
+                    "Question": "How many chain stopper(s) are fitted:",
+                    "Answer": "1"
+                },
+                {
+                    "Question Number": "9.19",
+                    "Question": "State type of chain stopper(s) fitted:",
+                    "Answer": "KETA 45F"
+                },
+                {
+                    "Question Number": "9.20",
+                    "Question": "Safe Working Load (SWL) of chain stopper(s):",
+                    "Answer": "200 MT"
+                },
+                {
+                    "Question Number": "9.21",
+                    "Question": "What is the maximum size chain diameter the bow stopper(s) can handle:",
+                    "Answer": "76 mm"
+                },
+                {
+                    "Question Number": "9.22",
+                    "Question": "Distance between the bow fairlead and chain stopper/bracket:",
+                    "Answer": "740 mm"
+                },
+                {
+                    "Question Number": "9.23",
+                    "Question": "Is bow chock and/or fairlead of enclosed type of OCIMF recommended size (600mm x 450mm)?\nIf not, give details of size:",
+                    "Answer": "Yes Not Applicable"
+                }
+            ],
+            "Bow/Stern Thruster": [
+                {
+                    "Question Number": "9.14",
+                    "Question": "What is brake horse power of bow thruster (if fitted):",
+                    "Answer": "544 bhp, 405.66 Kw"
+                },
+                {
+                    "Question Number": "9.15",
+                    "Question": "What is brake horse power of stern thruster (if fitted):",
+                    "Answer": "bhp, 0 Kw"
+                }
+            ]
+        }
+    }
+]
