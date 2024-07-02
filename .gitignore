@@ -1,2 +1,4 @@
 .env
 venv
+basic_json.json
+structured_json.json
