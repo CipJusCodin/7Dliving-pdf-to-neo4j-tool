@@ -57,9 +57,6 @@ def process_with_openai(input_data, append_json_list):
     output_message = response.choices[0].message.content
     append_json_list.append(json.loads(output_message))
 
-    # with open("structured_json.json", "w", encoding="utf-8") as json_file:
-    #     json.dump(json.loads(output_message), json_file, indent=4)
-
     return json.loads(output_message)
 
 class Neo4jHandler:
@@ -152,27 +149,33 @@ def main():
                 temp_files.append(tmp_file.name)
 
         if st.button("Convert to JSON and Populate Neo4j"):
+            st.write("<div style='height: 20px;'></div>", unsafe_allow_html=True)  # Add space after the button
             all_converted_data = []
-
+            
             for tmp_file_path in temp_files:
-                tables = pdf_to_json_chunks(tmp_file_path)
+                with st.spinner('Creating Basic JSON...'):
+                    tables = pdf_to_json_chunks(tmp_file_path)
+                    st.markdown("<h5 style='color: #fae7b5;'>Basic JSON has been created ✓</h5>", unsafe_allow_html=True)
+
                 chunk_size = 5  # Number of tables per chunk
                 converted_data = []
 
-                for i in range(0, len(tables), chunk_size):
-                    chunk = tables[i:i + chunk_size]
-                    for table in chunk:
-                        process_with_openai(table, converted_data)
+                with st.spinner('Structuring basic JSON using OpenAI...'):
+                    for i in range(0, len(tables), chunk_size):
+                        chunk = tables[i:i + chunk_size]
+                        for table in chunk:
+                            process_with_openai(table, converted_data)
 
-                for data in converted_data:
-                    populate_data(data)
-                
+                st.markdown("<h5 style='color: #fae7b5;'>Structured JSON has been created ✓</h5>", unsafe_allow_html=True)
+                with st.spinner('Populating Neo4j database...'):
+                    for data in converted_data:
+                        populate_data(data)
+
+                st.markdown("<h5 style='color: #fae7b5;'>Neo4j database has been populated ✓</h5>", unsafe_allow_html=True)
                 all_converted_data.extend(converted_data)
 
             st.success("Conversion and population successful!")
-            st.json(all_converted_data)
 
-            # Then write all resulting data to file after main processing
             with open("structured_json.json", "w", encoding="utf-8") as json_file:
                 json.dump(all_converted_data, json_file, indent=4)
 
