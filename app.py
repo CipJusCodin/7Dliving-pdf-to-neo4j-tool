@@ -7,6 +7,7 @@ from openai import OpenAI
 from neo4j import GraphDatabase
 import os
 from dotenv import load_dotenv
+import subprocess
 
 load_dotenv()
 
@@ -143,6 +144,24 @@ def main():
 
     if uploaded_files:
         temp_files = []
+        with st.spinner('Running query and fetching results...'):
+            # Assuming you want to display results from ships.py here
+            subprocess.run(["python3", "ships.py"])  # Run ships.py to get results
+            query_results = []  # Store results here
+
+            # Fetch results from ships.py
+            # Example: Fetching results from Neo4jQueryRunner
+            from ships import Neo4jQueryRunner
+            query_runner = Neo4jQueryRunner(uri="bolt://localhost:7687", user="neo4j", password="yatharth2004")
+            query = 'MATCH (q:Question {number: "1.2"}) RETURN q.answer'
+            results = query_runner.run_query(query)
+            st.write("Results fetched from ships.py:")
+            for result in results:
+                st.write(result)
+
+            query_runner.close()
+
+
         for uploaded_file in uploaded_files:
             with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
                 tmp_file.write(uploaded_file.read())
@@ -156,6 +175,9 @@ def main():
                 with st.spinner('Creating Basic JSON...'):
                     tables = pdf_to_json_chunks(tmp_file_path)
                     st.markdown("<h5 style='color: #fae7b5;'>Basic JSON has been created ✓</h5>", unsafe_allow_html=True)
+                    with st.expander("View Basic JSON"):
+                        st.json(tables)
+
 
                 chunk_size = 5  # Number of tables per chunk
                 converted_data = []
@@ -167,6 +189,10 @@ def main():
                             process_with_openai(table, converted_data)
 
                 st.markdown("<h5 style='color: #fae7b5;'>Structured JSON has been created ✓</h5>", unsafe_allow_html=True)
+
+                with st.expander("View Structured JSON"):
+                    st.json(converted_data)
+
                 with st.spinner('Populating Neo4j database...'):
                     for data in converted_data:
                         populate_data(data)
