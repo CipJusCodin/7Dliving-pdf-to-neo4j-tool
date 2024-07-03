@@ -5,7 +5,7 @@
 4. Create a file named ```.env``` in the cloned repository and  type ```OPENAI_API_KEY="Your api key"```
 5. Download and install neo4j database (https://neo4j.com/download/)
 6. Create a project in neo4j and set credentials for the same
-7. Update the credentials in the codebase in ```app.py```
+7. Update the credentials in the codebase in ```app.py``` & ```ships.py```
    ```
    uri = "bolt://localhost:7687"  # Update with your Neo4j URI
    user = "neo4j"  # Update with your Neo4j username
@@ -20,3 +20,4 @@
 3. ```client.py``` - Fetching data from neo4j using NLP (Work in progress).
 4. ```Marilena.pdf``` - Pdf used for testing 
 5. ```neo4j_fetching_prompt.txt``` - Contains the prompt to generate cypher queries 
+6. ```ships.py``` - Fetches the existing ship names from neo4j DB
