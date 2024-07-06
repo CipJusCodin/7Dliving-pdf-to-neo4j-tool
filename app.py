@@ -7,16 +7,16 @@ from openai import OpenAI
 from neo4j import GraphDatabase
 import os
 from dotenv import load_dotenv
-import subprocess
 
+# Load environment variables
 load_dotenv()
-
 api_key = os.getenv("OPENAI_API_KEY")
 
 # Initialize the OpenAI client
 client = OpenAI(api_key=api_key)
 GPT_MODEL = "gpt-3.5-turbo-16k"
 
+# Convert PDF tables to JSON format
 def pdf_to_json_chunks(pdf_path):
     with pdfplumber.open(pdf_path) as pdf:
         tables = []
@@ -34,6 +34,7 @@ def pdf_to_json_chunks(pdf_path):
         json.dump(tables, json_file, indent=4)
     return tables
 
+# Process input JSON data using OpenAI to generate structured JSON
 def process_with_openai(input_data, append_json_list):
     with open("json_to_json_prompt.txt", "r", encoding="utf-8") as file:
         base_prompt = file.read()
@@ -57,30 +58,36 @@ def process_with_openai(input_data, append_json_list):
 
     output_message = response.choices[0].message.content
     append_json_list.append(json.loads(output_message))
-
     return json.loads(output_message)
 
+# Class to handle Neo4j operations
 class Neo4jHandler:
     def __init__(self, uri, user, password):
+        # Initialize Neo4jHandler with Neo4j connection details
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
     
     def close(self):
+        # Close the Neo4j connection
         self.driver.close()
     
     def create_document(self, document_name, document_version):
+        # Create a document node in Neo4j
         with self.driver.session() as session:
             session.write_transaction(self._create_and_return_document, document_name, document_version)
     
     def create_category(self, document_name, category):
+        # Create a category node and link it to a document node in Neo4j
         with self.driver.session() as session:
             session.write_transaction(self._create_and_return_category, document_name, category)
     
     def create_question(self, category, question_number, question, answer):
+        # Create a question node and link it to a category node in Neo4j
         with self.driver.session() as session:
             session.write_transaction(self._create_and_return_question, category, question_number, question, answer)
     
     @staticmethod
     def _create_and_return_document(tx, document_name, document_version):
+        # Create and return a document node
         query = (
             "MERGE (d:Document {name: $document_name, version: $document_version}) "
             "RETURN d"
@@ -90,6 +97,7 @@ class Neo4jHandler:
     
     @staticmethod
     def _create_and_return_category(tx, document_name, category):
+        # Create and return a category node, linking it to a document
         query = (
             "MATCH (d:Document {name: $document_name}) "
             "MERGE (c:Category {name: $category}) "
@@ -101,6 +109,7 @@ class Neo4jHandler:
     
     @staticmethod
     def _create_and_return_question(tx, category, question_number, question, answer):
+        # Create and return a question node, linking it to a category
         query = (
             "MATCH (c:Category {name: $category}) "
             "CREATE (q:Question {number: $question_number, text: $question, answer: $answer}) "
@@ -110,15 +119,15 @@ class Neo4jHandler:
         result = tx.run(query, category=category, question_number=question_number, question=question, answer=answer)
         return result.single()
 
+# Format answer to JSON if it is a dictionary
 def format_answer(answer):
-    if isinstance(answer, dict):
-        return json.dumps(answer)
-    return answer
+    return json.dumps(answer) if isinstance(answer, dict) else answer
 
+# Populate Neo4j database with structured JSON data
 def populate_data(json_data):
-    uri = "bolt://localhost:7687"  # Update with your Neo4j URI
-    user = "neo4j"  # Update with your Neo4j username
-    password = "yatharth2004"  # Update with your Neo4j password
+    uri = "bolt://localhost:7687"
+    user = "neo4j"
+    password = "yatharth2004"
     
     handler = Neo4jHandler(uri, user, password)
     
@@ -137,31 +146,46 @@ def populate_data(json_data):
     finally:
         handler.close()
 
+# Run a query on the Neo4j database to retrieve ship names
+def run_ships_query():
+    class Neo4jQueryRunner:
+        def __init__(self, uri, user, password):
+            self.driver = GraphDatabase.driver(uri, auth=(user, password))
+
+        def close(self):
+            # Close the Neo4j connection
+            self.driver.close()
+
+        def run_query(self, query):
+            # Run a Cypher query on the Neo4j database
+            with self.driver.session() as session:
+                result = session.run(query)
+                return [record["q.answer"] for record in result]
+
+    uri = "bolt://localhost:7687"
+    user = "neo4j"
+    password = "yatharth2004"
+
+    query_runner = Neo4jQueryRunner(uri, user, password)
+    query = 'MATCH (q:Question {number: "1.2"}) RETURN q.answer'
+    results = query_runner.run_query(query)
+    query_runner.close()
+    return results
+
+# Main function to run the Streamlit app
 def main():
     st.title("PDF to JSON Table Extractor and Neo4j Populator")
+
+    # Display results from ships query in an expander
+    with st.expander("Available Ship names in database"):
+        results = run_ships_query()
+        for result in results:
+            st.write(result)
 
     uploaded_files = st.file_uploader("Upload PDF files", type="pdf", accept_multiple_files=True)
 
     if uploaded_files:
         temp_files = []
-        with st.spinner('Running query and fetching results...'):
-            # Assuming you want to display results from ships.py here
-            subprocess.run(["python3", "ships.py"])  # Run ships.py to get results
-            query_results = []  # Store results here
-
-            # Fetch results from ships.py
-            # Example: Fetching results from Neo4jQueryRunner
-            from ships import Neo4jQueryRunner
-            query_runner = Neo4jQueryRunner(uri="bolt://localhost:7687", user="neo4j", password="yatharth2004")
-            query = 'MATCH (q:Question {number: "1.2"}) RETURN q.answer'
-            results = query_runner.run_query(query)
-            st.write("Results fetched from ships.py:")
-            for result in results:
-                st.write(result)
-
-            query_runner.close()
-
-
         for uploaded_file in uploaded_files:
             with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
                 tmp_file.write(uploaded_file.read())
@@ -170,14 +194,13 @@ def main():
         if st.button("Convert to JSON and Populate Neo4j"):
             st.write("<div style='height: 20px;'></div>", unsafe_allow_html=True)  # Add space after the button
             all_converted_data = []
-            
+
             for tmp_file_path in temp_files:
                 with st.spinner('Creating Basic JSON...'):
                     tables = pdf_to_json_chunks(tmp_file_path)
                     st.markdown("<h5 style='color: #fae7b5;'>Basic JSON has been created ✓</h5>", unsafe_allow_html=True)
                     with st.expander("View Basic JSON"):
                         st.json(tables)
-
 
                 chunk_size = 5  # Number of tables per chunk
                 converted_data = []
