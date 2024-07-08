@@ -85,6 +85,10 @@ class Neo4jHandler:
         with self.driver.session() as session:
             session.write_transaction(self._create_and_return_question, category, question_number, question, answer)
     
+    def create_ship(self, ship_name):
+        with self.driver.session() as session:
+            session.write_transaction(self._create_and_return_ship, ship_name)
+    
     @staticmethod
     def _create_and_return_document(tx, document_name, document_version):
         # Create and return a document node
@@ -119,6 +123,16 @@ class Neo4jHandler:
         result = tx.run(query, category=category, question_number=question_number, question=question, answer=answer)
         return result.single()
 
+    @staticmethod
+    def _create_and_return_ship(tx, ship_name):
+        # Create and return a ship node
+        query = (
+            "MERGE (s:Ship {name: $ship_name}) "
+            "RETURN s"
+        )
+        result = tx.run(query, ship_name=ship_name)
+        return result.single()
+    
 # Format answer to JSON if it is a dictionary
 def format_answer(answer):
     return json.dumps(answer) if isinstance(answer, dict) else answer
@@ -134,7 +148,23 @@ def populate_data(json_data):
     try:
         document_name = json_data["Document Name"]
         document_version = json_data["Document Version"]
+        ship_name = None
+
+        
+        # Find ship name from questions
+        for category, questions in json_data["Categories"].items():
+            for question in questions:
+                if question["Question Number"] == "1.2":
+                    ship_name = question["Answer"]
+                    break  
+            if ship_name:
+                break  
+
+        if not ship_name:
+            raise ValueError("Ship name not found in JSON.")
+
         handler.create_document(document_name, document_version)
+        handler.create_ship(ship_name)
 
         for category, questions in json_data["Categories"].items():
             handler.create_category(document_name, category)
@@ -143,6 +173,24 @@ def populate_data(json_data):
                 question_text = question["Question"]
                 answer = format_answer(question["Answer"])
                 handler.create_question(category, question_number, question_text, answer)
+
+        # Link questions and categories to the ship node
+            with handler.driver.session() as session:
+                session.run(
+                    "MATCH (s:Ship {name: $ship_name}) "
+                    "MATCH (d:Document {name: $document_name}) "
+                    "MERGE (s)-[:HAS_DOCUMENT]->(d)",
+                    ship_name=ship_name, document_name=document_name
+                )
+
+                for category in json_data["Categories"]:
+                    session.run(
+                        "MATCH (s:Ship {name: $ship_name}) "
+                        "MATCH (c:Category {name: $category}) "
+                        "MERGE (s)-[:HAS_CATEGORY]->(c)",
+                        ship_name=ship_name, category=category
+                    )
+
     finally:
         handler.close()
 
