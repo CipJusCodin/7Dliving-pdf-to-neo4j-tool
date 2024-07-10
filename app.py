@@ -12,6 +12,8 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
+global_ship_name = None
+
 # Initialize the OpenAI client
 client = OpenAI(api_key=api_key)
 GPT_MODEL = "gpt-3.5-turbo-16k"
@@ -139,6 +141,7 @@ def format_answer(answer):
 
 # Populate Neo4j database with structured JSON data
 def populate_data(json_data):
+    global global_ship_name
     uri = "bolt://localhost:7687"
     user = "neo4j"
     password = "yatharth2004"
@@ -148,23 +151,19 @@ def populate_data(json_data):
     try:
         document_name = json_data["Document Name"]
         document_version = json_data["Document Version"]
-        ship_name = None
 
-        
-        # Find ship name from questions
         for category, questions in json_data["Categories"].items():
             for question in questions:
                 if question["Question Number"] == "1.2":
-                    ship_name = question["Answer"]
-                    break  
-            if ship_name:
-                break  
+                    new_ship_name = question["Answer"]
+                    if new_ship_name:
+                        global_ship_name = new_ship_name
 
-        if not ship_name:
+        if not global_ship_name:
             raise ValueError("Ship name not found in JSON.")
 
         handler.create_document(document_name, document_version)
-        handler.create_ship(ship_name)
+        handler.create_ship(global_ship_name)
 
         for category, questions in json_data["Categories"].items():
             handler.create_category(document_name, category)
@@ -180,7 +179,7 @@ def populate_data(json_data):
                     "MATCH (s:Ship {name: $ship_name}) "
                     "MATCH (d:Document {name: $document_name}) "
                     "MERGE (s)-[:HAS_DOCUMENT]->(d)",
-                    ship_name=ship_name, document_name=document_name
+                    ship_name=global_ship_name, document_name=document_name
                 )
 
                 for category in json_data["Categories"]:
@@ -188,7 +187,7 @@ def populate_data(json_data):
                         "MATCH (s:Ship {name: $ship_name}) "
                         "MATCH (c:Category {name: $category}) "
                         "MERGE (s)-[:HAS_CATEGORY]->(c)",
-                        ship_name=ship_name, category=category
+                        ship_name=global_ship_name, category=category
                     )
 
     finally:
@@ -271,7 +270,7 @@ def main():
                 st.markdown("<h5 style='color: #fae7b5;'>Neo4j database has been populated ✓</h5>", unsafe_allow_html=True)
                 all_converted_data.extend(converted_data)
 
-            st.success("Conversion and population successful!")
+            st.success(f"Conversion and population successful for ship {global_ship_name}")
 
             with open("structured_json.json", "w", encoding="utf-8") as json_file:
                 json.dump(all_converted_data, json_file, indent=4)
